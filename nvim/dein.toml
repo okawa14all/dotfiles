@@ -9,6 +9,9 @@ hook_add = '''
     \}
 '''
 
+[[plugins]] # Comment out
+repo = 'tomtom/tcomment_vim'
+
 # Lang
 
 [[plugins]] # Haml
