@@ -1,5 +1,6 @@
-set number
-set clipboard=unnamed
+augroup MyAutoCmd
+  autocmd!
+augroup END
 
 " dein cache dir
 let $CACHE = expand('~/.cache')
@@ -25,8 +26,13 @@ endif
 let s:path = expand('$CACHE/dein')
 if dein#load_state(s:path)
   call dein#begin(s:path)
-"  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy' : 0})
-"  call dein#load_toml('~/.config/nvim/deinlazy.toml', {'lazy' : 1})
+
+  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy' : 0})
+  call dein#load_toml('~/.config/nvim/deinlazy.toml', {'lazy' : 1})
+  if has('nvim')
+    call dein#load_toml('~/.config/nvim/dein_neovim.toml', {'lazy': 1})
+  endif
+
   call dein#end()
   call dein#save_state()
 endif
@@ -34,3 +40,14 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+set number
+set clipboard=unnamed
+set tabstop=2
+set title
+set showmatch
+
+set background=dark
+colorscheme hybrid
+syntax on
+
