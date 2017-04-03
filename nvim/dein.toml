@@ -1,8 +1,11 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
+[[plugins]] # Git連携
 repo = 'tpope/vim-fugitive'
+
+[[plugins]] # 括弧の自動挿入
+repo = 'cohama/lexima.vim'
 
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
