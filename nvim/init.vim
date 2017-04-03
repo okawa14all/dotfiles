@@ -66,7 +66,7 @@ colorscheme hybrid
 syntax on
 
 " Denite key mapping
-nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec<CR>
+nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec -highlight-mode-insert=Search<CR>
 nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
 nnoremap <silent> <C-k><C-l> :<C-u>Denite line<CR>
-nnoremap <silent> <C-k><C-b> :<C-u>Denite buffer<CR>
+nnoremap <silent> <C-k><C-b> :<C-u>Denite buffer -highlight-mode-insert=Search<CR>
