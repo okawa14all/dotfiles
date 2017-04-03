@@ -70,3 +70,6 @@ nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec -highlight-mode-insert=Search
 nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
 nnoremap <silent> <C-k><C-l> :<C-u>Denite line<CR>
 nnoremap <silent> <C-k><C-b> :<C-u>Denite buffer -highlight-mode-insert=Search<CR>
+" ESCの代替
+noremap <C-j> <esc>
+noremap! <C-j> <esc>
