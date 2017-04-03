@@ -47,6 +47,20 @@ set tabstop=2
 set title
 set showmatch
 
+set statusline+=%{fugitive#statusline()}
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'fugitive': 'MyFugitive'
+    \ }
+\ }
+function! MyFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+
 set background=dark
 colorscheme hybrid
 syntax on

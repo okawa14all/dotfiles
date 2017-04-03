@@ -1,13 +1,11 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
-hook_add = '''
-    let g:lightline = { 
-    \   'colorscheme': 'wombat'
-    \}
-'''
 
 [[plugins]] # Comment out
 repo = 'tomtom/tcomment_vim'
