@@ -69,6 +69,9 @@ set background=dark
 colorscheme hybrid
 syntax on
 
+" 保存時に行末のスペースを削除
+autocmd BufWritePre * :%s/\s\+$//ge
+
 " Denite key mapping
 nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec -highlight-mode-insert=Search<CR>
 nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
@@ -77,3 +80,6 @@ nnoremap <silent> <C-k><C-b> :<C-u>Denite buffer -highlight-mode-insert=Search<C
 " ESCの代替
 noremap <C-j> <esc>
 noremap! <C-j> <esc>
+" バッファ切り替え
+map <silent> <C-b><C-n> :bn<CR>
+map <silent> <C-b><C-b> :bp<CR>
