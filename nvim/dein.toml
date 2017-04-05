@@ -1,6 +1,9 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
 [[plugins]] # Git連携
 repo = 'tpope/vim-fugitive'
 
