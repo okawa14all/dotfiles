@@ -83,3 +83,6 @@ noremap! <C-j> <esc>
 " バッファ切り替え
 map <silent> <C-b><C-n> :bn<CR>
 map <silent> <C-b><C-b> :bp<CR>
+" ctrl + s で保存
+inoremap <silent> <C-s> <Esc>:w<CR>
+
