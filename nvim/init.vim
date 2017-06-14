@@ -78,7 +78,7 @@ nnoremap <silent> <C-k><C-g> :<C-u>Denite grep -highlight-mode-insert=Search<CR>
 nnoremap <silent> <C-k><C-l> :<C-u>Denite line -highlight-mode-insert=Search<CR>
 nnoremap <silent> <C-k><C-b> :<C-u>Denite buffer -highlight-mode-insert=Search<CR>
 " ESCの代替
-noremap <C-j> <esc>
+imap <C-j> <esc>
 noremap! <C-j> <esc>
 " バッファ切り替え
 map <silent> <C-b><C-n> :bn<CR>
