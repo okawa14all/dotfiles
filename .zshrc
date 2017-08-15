@@ -12,6 +12,7 @@ setopt magic_equal_subst # =以降も補完する(--prefix=/usrなど)
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
 setopt notify            # バックグラウンドジョブの状態変化を即時報告する
 setopt equals            # =commandを`which command`と同じ処理にする
+setopt nonomatch
 
 ### Complement ###
 autoload -U compinit; compinit # 補完機能を有効にする
@@ -138,3 +139,8 @@ fi
 ### nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+### oracle
+# export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_12_1
+# export ORACLE_HOME=/opt/oracle/instantclient_12_1
+export OCI_DIR=$(brew --prefix)/lib
+export NLS_LANG=Japanese_Japan.JA16SJIS
