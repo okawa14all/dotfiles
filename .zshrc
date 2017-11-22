@@ -5,6 +5,7 @@ export EDITOR=vim        # エディタをvimに設定
 export LANG=ja_JP.UTF-8  # 文字コードをUTF-8に設定
 
 #bindkey -v              # キーバインドをviモードに設定
+bindkey -e
 
 setopt no_beep           # ビープ音を鳴らさないようにする
 setopt correct           # コマンドのスペルを訂正する
@@ -94,17 +95,17 @@ alias mvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
 
 ### git aliases ###
-alias gst='git status'
-alias gad='git add'
-alias gdi='git diff'
+alias gst='git status -sb'
+alias gad='git add -A'
+alias gdi='git diff --cached'
 alias gco='git commit'
-alias gps='git push'
-alias gpl='git pull'
+alias gpu='git push'
 alias gch='git checkout'
 alias gfe='git fetch'
 alias gbr='git branch'
 alias glog='git log'
-alias gloga="git log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d'"
+alias gl="git log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d'"
+alias gg="git grep"
 
 ### iPhone Simulator list alias
 alias iphonesimlist='/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/simctl list'
